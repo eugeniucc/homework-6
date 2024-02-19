@@ -1,0 +1,411 @@
+@import "../sass/base/_base"
+@import "../sass/abstracts/_variables"
+@import "../sass/abstracts/_mixins"
+@import "../sass/abstracts/_animations"
+@import "../sass/layout/_header"
+@import "../sass/layout/_footer"
+@import "../sass/components/_button"
+
+@media (max-width: 1400px)
+@media (max-width: 1200px)
+@media (max-width: 1024px)
+@media (max-width: 820px)
+@media (max-width: 425px)
+@media (max-width: 375px)
+@media (max-width: 320px)
+
+.lessons 
+    background: #2C2C2C
+    &__top 
+        display: flex
+        flex-direction: column
+        gap: 71px
+        text-align: center
+        padding: 73px 0px 62px 0px
+        margin: 0 auto
+        max-width: 815px
+        @media (max-width: 820px)
+            gap: 55px
+        @media (max-width: 820px)
+            padding-top: 45px
+        @media (max-width: 425px)
+            padding: 45px 0px 45px 0px
+        &--title 
+            @include title-style
+            text-align: center
+            position: relative
+        &--title::before
+            @include title-element
+            left: 50%
+            bottom: -19px
+            @media (max-width: 375px)
+                bottom: -30px
+        &--text 
+            @include title-subtext
+            max-width: 586px
+            text-align: center
+            margin: 0 auto
+            @media (max-width: 375px)
+                padding: 0px 15px
+    &__bottom
+        padding-bottom: 163px
+        @media (max-width: 1024px)
+            padding-bottom: 80px
+        @media (max-width: 820px)
+            padding-bottom: 45px
+        &--items
+            display: flex
+            justify-content: space-around
+            gap: 87px
+            margin: 0 auto
+            @media (max-width: 1200px)
+                padding: 0px 15px
+            @media (max-width: 820px)
+                gap: 10px
+            @media (max-width: 425px)
+                flex-direction: column
+                align-items: center
+                gap: 40px
+        &--item 
+            @include title-subtext
+            text-align: left
+            @media (max-width: 425px)
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-align: center
+        &--img 
+            padding-bottom: 35px
+        &--text 
+            max-width: 253px
+
+.pro
+    background: #202020
+    height: 1000px
+    @media (max-width: 1200px)
+        height: 750px
+    @media (max-width: 1024px)
+        height: 600px
+    @media (max-width: 820px)
+        height: 500px
+    @media (max-width: 375px)
+        height: 550px
+    &__wrapper 
+        display: flex
+        align-items: center
+        position: relative
+        padding-top: 250px
+        background: url(../../img/moto--ellipse.png) no-repeat right
+        @media (max-width: 1200px)
+            background-size: 70%
+            padding-top: 150px
+        @media (max-width: 1024px)
+            padding-top: 90px
+        @media (max-width: 820px)
+            padding-top: 60px
+        @media (max-width: 425px)
+            background-position: center
+            background-size: 150%
+        @media (max-width: 375px)
+            background: none
+            padding: 45px 0px
+    &__description
+            width: 610px
+            position: relative
+            @media (max-width: 1400px)
+                padding-left: 15px
+            @media (max-width: 375px)
+                width: 100%
+                padding: 0px 15px
+    &__title
+        @include title-style
+        text-align: left
+        text-transform: uppercase
+        padding-bottom: 90px
+        position: relative
+        @media (max-width: 820px)
+            padding-bottom: 75px
+        @media (max-width: 375px)
+            text-align: center
+    &__title::after
+        @include title-element
+        transform: translate(0px, 0px)
+        bottom: 50px
+        left: 0
+        @media (max-width: 425px)
+            bottom: 40px
+        @media (max-width: 375px)
+            left: 50%
+            transform: translate(-50%, -50%)
+    &__text 
+        @include title-subtext
+        text-align: left
+        &--span
+            display: block
+            padding-top: 15px
+            width: 585px
+        @media (max-width: 1024px)
+            display: none
+        @media (max-width: 375px)
+            display: block
+            text-align: center
+            padding-bottom: 25px
+    &__text--span 
+        @media (max-width: 375px)
+            display: block
+            width: 100%
+            text-align: center
+    &__text--mobile--1024
+        display: none
+        @media (max-width: 1024px)
+            display: block
+            @include title-subtext
+            text-align: left
+        @media (max-width: 820px)
+            display: none
+    &__text--mobile--768
+        display: none
+    &__text--mobile--768
+        display: none
+        @media (max-width: 820px)
+            display: block
+            @include title-subtext
+            text-align: left
+        @media (max-width: 375px)
+            display: none
+    &__text--mobile--span
+        display: block
+        padding-top: 15px
+           
+.consult
+    padding: 87px 0px
+    background-image: url(/homework_6/img/bg--consult.png)
+    @media (max-width: 1200px)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+    @media (max-width: 820px)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+    @media (max-width: 425px)
+        padding: 45px 0px
+    &__title
+        @include title-style
+        text-align: center
+        padding-bottom: 60px
+        position: relative
+        @media (max-width: 375px)
+            padding: 0px 15px 60px 15px
+    &__title::after
+        @include title-element
+        bottom: 30px
+        left: 50%
+    &__text
+        @include title-subtext
+        text-align: center
+        padding-bottom: 72px
+    &__user 
+        display: flex
+        justify-content: space-between
+        padding-bottom: 50px
+        @media (max-width: 1400px)
+            justify-content: space-around
+        @media (max-width: 425px)
+            flex-direction: column
+            align-items: center
+            gap: 40px
+        &--data
+            background: transparent
+            border: 0
+            width: 346px
+            height: 34px
+            color: rgb(255, 255, 255)
+            font-family: Montserrat
+            font-size: 18px
+            font-weight: 500
+            line-height: 22px
+            letter-spacing: 2px
+            text-align: left
+            padding-left: 7px
+            padding-bottom: 12px
+            outline: none
+            border-bottom: 1px solid #41454E
+            @media (max-width: 1024px)
+                width: auto
+            @media (max-width: 820px)
+                width: 30%
+            @media (max-width: 425px)
+                width: 80%
+        &--data::placeholder
+            color: #fff
+    &__btn
+        display: flex
+        justify-content: center
+.harley
+    background: rgb(32, 32, 32)
+    padding: 100px 0px 190px 0px
+    @media (max-width: 1200px)
+            padding: 100px 0px 95px 0px
+    @media (max-width: 820px)
+            padding: 45px 0px 45px 0px
+    &__description
+        text-align: center
+        padding-bottom: 140px
+        @media (max-width: 425px)
+            padding: 0px
+    &__title
+        @include title-style
+        text-align: center
+        width: 815px
+        margin: 0 auto
+        padding-bottom: 78px
+        position: relative
+        @media (max-width: 820px)
+            width: 100%
+        @media (max-width: 375px)
+            padding: 0px 15px 60px 15px
+    &__title::after
+        @include title-element
+        left: 50%
+        bottom: 37px
+    &__text
+        @include title-subtext
+        text-align: center
+        @media (max-width: 425px)
+            padding: 0px 15px
+    &__video--title
+        @include title-style
+        text-align: center
+        padding-bottom: 74px
+        position: relative
+        @media (max-width: 375px)
+            padding: 0px 15px 60px 15px
+    &__video--title::after
+        display: block
+        position: absolute
+        left: 50%
+        bottom: 37px
+        transform: translate(-50%, -50%)
+        content: ""
+        width: 80px 
+        height: 4px
+        border-radius: 2px
+        background: rgb(235, 96, 29)
+    &__video--play
+        width: 80%
+        cursor: pointer
+        display: block
+        margin: 0 auto
+    &__video
+        position: relative
+    &__video--btn
+        display: block
+        content: ""
+        position: absolute
+        top: 60%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        @media (max-width: 820px)
+            top: 65%
+            width: 8%
+        @media (max-width: 425px)
+            top: 70%
+        @media (max-width: 375px)
+            top: 75%
+        @media (max-width: 320px)
+            top: 80%
+    &__box
+        position: relative
+        z-index: 1
+        @media (max-width: 425px)
+            padding: 45px 0px
+    &__img
+        @media (max-width: 1200px)
+            width: 80%
+    &__img--circle
+        z-index: -1
+        display: block
+        content: ""
+        position: absolute
+        top: 60%
+        left: 50%
+        transform: translate(-50%, -50%)
+        @media (max-width: 1200px)
+            width: 80%
+        @media (max-width: 1024px)
+            width: 70%
+
+.gifts 
+    background: rgb(44, 44, 44)
+    padding: 196px 0px 167px 0px
+    @media (max-width: 1200px)
+        padding: 95px 0px 95px 0px
+    @media (max-width: 1024px)
+        padding: 40px 0px 0px 0px
+    &__btn
+        @media (max-width: 320px)
+            display: flex
+    &__title
+        @include title-style
+        text-align: left
+        position: relative
+        padding-bottom: 111px
+        @media (max-width: 1024px)
+            padding-bottom: 80px
+        @media (max-width: 820px)
+            padding-bottom: 55px
+        @media (max-width: 375px)
+            text-align: center
+    &__title::after
+        @include title-element
+        bottom: 38px
+        left: 40px
+        @media (max-width: 820px)
+            bottom: 25px
+        @media (max-width: 375px)
+            left: 50%
+    &__text 
+        @include title-subtext
+        text-align: left
+        width: 580px
+        padding-bottom: 60px
+        @media (max-width: 820px)
+            display: none
+    &__text--mobile--768
+        display: none
+        @media (max-width: 820px)
+            display: block
+            @include title-subtext
+            text-align: left
+            padding-bottom: 45px
+        @media (max-width: 375px)
+            text-align: center
+    &__description
+        background: url(/homework_6/icons/gifts.png) no-repeat right
+        height: 700px
+        @media (max-width: 1400px)
+            padding-left: 15px
+        @media (max-width: 1200px)
+                background-size: 70%
+                height: 500px
+        @media (max-width: 1024px)
+                background-size: contain
+        @media (max-width: 820px)
+                background-position: bottom 40px right 0px
+                background-size: 75%
+                height: 400px
+        @media (max-width: 425px)
+                background-position: unset
+                background-size: 100%
+        @media (max-width: 375px)
+                background: none
+        @media (max-width: 375px)
+                padding-left: 0
+
+
+// harley__video--play я не смог его сдвинуть дал w100% почему ? harley__video text-align center чего ?
+// harley__video--play -> fix display block m0-auto 
+// gifts__btn кнопка была вне div text-align center ? gifts__btn -> fix display flex
